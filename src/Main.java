@@ -1,13 +1,25 @@
 import Animais.Cachorro;
+import Animais.Gato;
+
 
 public class Main {
     public static void main(String[] args) {
 
-        Cachorro cachorroMeu = new Cachorro();
-        cachorroMeu.nome = "Floquinho";
-        cachorroMeu.raca = "Fox Paulistinho";
-        cachorroMeu.cor = "Preto e Branco";
+        Cachorro cachorro = new Cachorro();
+        cachorro.nome = "Floquinho";
+        cachorro.raca = "Fox Paulistinho";
+        cachorro.cor = "Preto e Branco";
 
+
+
+        Gato gato = new Gato();
+        gato.setName("Jake");
+        gato.setColor("Orange");
+        gato.setHeight(30);
+        gato.setWeight(8);
+        gato.setRace("Siames");
+
+        System.out.println(gato.getName());
 
     }
 }
