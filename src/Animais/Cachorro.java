@@ -5,9 +5,11 @@ public class Cachorro {
     public String nome;
     public String cor;
     public String raca;
-    public int altura;
-    public double peso;
-    public String estadoDeEspirito;
+
+
+    private int altura;
+    private double peso;
+    private String estadoDeEspirito;
 
 
     public String pegar(String acao) {
@@ -21,10 +23,10 @@ public class Cachorro {
 
     public String interagir(String acao){
         switch (acao) {
-            case "brincar" -> this.estadoDeEspirito = "feliz";
-            case "dormir" -> this.estadoDeEspirito = "cansado";
-            case "chutar" -> this.estadoDeEspirito = "bravo";
-            default -> this.estadoDeEspirito = "neutro";
+            case "brincar" -> this.estadoDeEspirito = " está feliz";
+            case "dormir" -> this.estadoDeEspirito = " parece cansado";
+            case "chutar" -> this.estadoDeEspirito = " está bravo";
+            default -> this.estadoDeEspirito = "não quer fazer nada";
         }
         return estadoDeEspirito;
     }

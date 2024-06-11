@@ -1,0 +1,62 @@
+warning: in the working copy of 'src/Main.java', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/src/Animais/Cachorro.java b/src/Animais/Cachorro.java[m
+[1mindex e2084b5..f38173e 100644[m
+[1m--- a/src/Animais/Cachorro.java[m
+[1m+++ b/src/Animais/Cachorro.java[m
+[36m@@ -5,9 +5,11 @@[m [mpublic class Cachorro {[m
+     public String nome;[m
+     public String cor;[m
+     public String raca;[m
+[31m-    public int altura;[m
+[31m-    public double peso;[m
+[31m-    public String estadoDeEspirito;[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    private int altura;[m
+[32m+[m[32m    private double peso;[m
+[32m+[m[32m    private String estadoDeEspirito;[m
+ [m
+ [m
+     public String pegar(String acao) {[m
+[36m@@ -21,10 +23,10 @@[m [mpublic class Cachorro {[m
+ [m
+     public String interagir(String acao){[m
+         switch (acao) {[m
+[31m-            case "brincar" -> this.estadoDeEspirito = "feliz";[m
+[31m-            case "dormir" -> this.estadoDeEspirito = "cansado";[m
+[31m-            case "chutar" -> this.estadoDeEspirito = "bravo";[m
+[31m-            default -> this.estadoDeEspirito = "neutro";[m
+[32m+[m[32m            case "brincar" -> this.estadoDeEspirito = " está feliz";[m
+[32m+[m[32m            case "dormir" -> this.estadoDeEspirito = " parece cansado";[m
+[32m+[m[32m            case "chutar" -> this.estadoDeEspirito = " está bravo";[m
+[32m+[m[32m            default -> this.estadoDeEspirito = " não tem reações";[m
+         }[m
+         return estadoDeEspirito;[m
+     }[m
+[1mdiff --git a/src/Main.java b/src/Main.java[m
+[1mindex ab0a47b..f91dbac 100644[m
+[1m--- a/src/Main.java[m
+[1m+++ b/src/Main.java[m
+[36m@@ -3,17 +3,11 @@[m [mimport Animais.Cachorro;[m
+ public class Main {[m
+     public static void main(String[] args) {[m
+ [m
+[31m-        Cachorro cachorro1 = new Cachorro();[m
+[31m-        cachorro1.nome = "Floquinho";[m
+[31m-        cachorro1.raca = "Fox Paulistinho";[m
+[31m-        cachorro1.cor = "Preto e Branco";[m
+[31m-        cachorro1.altura = 55;[m
+[31m-        cachorro1.peso = 9;[m
+[32m+[m[32m        Cachorro cachorroMeu = new Cachorro();[m
+[32m+[m[32m        cachorroMeu.nome = "Floquinho";[m
+[32m+[m[32m        cachorroMeu.raca = "Fox Paulistinho";[m
+[32m+[m[32m        cachorroMeu.cor = "Preto e Branco";[m
+ [m
+ [m
+[31m-        cachorro1.estadoDeEspirito = "dormir";[m
+[31m-        String temperamento = (cachorro1.interagir(cachorro1.estadoDeEspirito));[m
+[31m-[m
+[31m-        System.out.println(temperamento);[m
+     }[m
+ }[m
+\ No newline at end of file[m
