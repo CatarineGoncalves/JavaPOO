@@ -1,5 +1,6 @@
 import Animais.Cachorro;
 import Animais.Gato;
+import Animais.Passaro;
 
 
 public class Main {
@@ -7,14 +8,12 @@ public class Main {
 
     // variaveis estáticas (static) servem para quando queremos uma variavel unica para cada classe que engloba todos os objetos
 
+        Cachorro cachorro = new Cachorro("Arthur", 12, "azul", 20, 8, "feliz");
+        Passaro passaro = new Passaro("Arzinho", 40, "amarelo e azul", 12, 2, "irritado");
+        Gato gato = new Gato("Franklin", 5, "preto", 50, 8, "calmo");
 
-        Cachorro cachorro = new Cachorro("Floquinho", 7, "Branco com Preto", "Fox Paulistinho", 40, 9);
-
-        System.out.println(cachorro.getCounterDogs());
-
-        Cachorro outroCachorro = new Cachorro("Espirro", 12, "Preto e Amarelo", "Vira lata", 60, 20);
-
-        System.out.println(cachorro.getCounterDogs());
-
+      cachorro.sound();
+      gato.sound();
+      passaro.sound();
     }
 }

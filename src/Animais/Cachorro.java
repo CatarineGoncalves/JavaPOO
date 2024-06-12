@@ -1,29 +1,14 @@
 package Animais;
 
-public class Cachorro {
+public class Cachorro extends AnimaisDomesticos {
 
-    private String name;
-    private int age;
-    private String gender;
-    private String color;
-    private String race;
-    private int height;
-    private double weight;
-    private String emotions;
-    static int counterDogs;
+    private static int counterDogs;
 
-    //constructor
-    public Cachorro(String name, int age, String color, String race, int height, double weight) {
-        this.name = name;
-        this.age = age;
-        this.color = color;
-        this.race = race;
-        this.height = height;
-        this.weight = weight;
 
-        counterDogs ++;
+    public Cachorro(String name, int age, String color, int height, double weight, String emotions) {
+        super(name, age, color, height, weight, emotions);
+        counterDogs++;
     }
-
 
     public static int getCounterDogs() {
         return counterDogs;
@@ -57,14 +42,6 @@ public class Cachorro {
         this.color = color;
     }
 
-    public String getRace() {
-        return race;
-    }
-
-    public void setRace(String race) {
-        this.race = race;
-    }
-
     public int getHeight() {
         return height;
     }
@@ -77,8 +54,12 @@ public class Cachorro {
         return weight;
     }
 
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
     public String getEmotions() {
-        return this.emotions;
+        return emotions;
     }
 
     public void setEmotions(String emotions) {
@@ -96,14 +77,16 @@ public class Cachorro {
         return this.emotions;
     }
 
-
     @Override
     public String toString() {
         return String.format("Nome: %s, Idade: %d, Cor: %s, Raça: %s, Altura: %d, Peso: %.1f",
-                name, age, color, race, height, weight);
+                name, color, weight);
     }
 
-
+    @Override
+    public void sound() {
+        System.out.println("AU AU");
+    }
 }
 
 
