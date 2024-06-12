@@ -10,27 +10,23 @@ public class Gato {
     private double weight;
     private String emotions;
 
+
+    public Gato(String name, String color, String race, int age, int height, double weight, String emotions) {
+        this.name = name;
+        this.color = color;
+        this.race = race;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
+        this.emotions = emotions;
+    }
+
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public void setName(String name) {
-        if (name.equals(("Garfield"))) {
-            this.name = null;
-        } else {
-            this.name = name;
-        }
-
         this.name = name;
-
-    }
-
-    public int getAge() {
-        return this.age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public String getColor() {
@@ -49,6 +45,14 @@ public class Gato {
         this.race = race;
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     public int getHeight() {
         return height;
     }
@@ -65,17 +69,13 @@ public class Gato {
         this.weight = weight;
     }
 
-
-
     public String getEmotions() {
-        return this.emotions;
+        return emotions;
     }
+
     public void setEmotions(String emotions) {
         this.emotions = emotions;
     }
-
-
-
 
     public String interact(String acao) {
             switch (acao) {
