@@ -5,6 +5,7 @@ public class Gato {
     private String name;
     private String color;
     private String race;
+    private int age;
     private int height;
     private double weight;
     private String emotions;
@@ -22,6 +23,14 @@ public class Gato {
 
         this.name = name;
 
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getColor() {
@@ -56,12 +65,27 @@ public class Gato {
         this.weight = weight;
     }
 
-    public String getEmotions() {
-        return emotions;
-    }
 
+
+    public String getEmotions() {
+        return this.emotions;
+    }
     public void setEmotions(String emotions) {
         this.emotions = emotions;
+    }
+
+
+
+
+    public String interact(String acao) {
+            switch (acao) {
+                case "acaricia" -> emotions = "ronronar";
+                case "briga" -> emotions = "arranhar";
+                case "alimenta" -> emotions = "lamber";
+                default -> emotions = "dormindo";
+            }
+
+            return this.emotions;
     }
 
 }

@@ -11,6 +11,18 @@ public class Cachorro {
     private double peso;
     private String estadoDeEspirito;
 
+    //constructor
+    Cachorro(String name, String color, String race, int height, double weight, String emotions) {
+
+    }
+
+
+
+
+
+
+
+
 
     public String pegar(String acao) {
 
@@ -21,7 +33,7 @@ public class Cachorro {
         }
     }
 
-    public String interagir(String acao){
+    public String interact(String acao){
         switch (acao) {
             case "brincar" -> this.estadoDeEspirito = " está feliz";
             case "dormir" -> this.estadoDeEspirito = " parece cansado";
