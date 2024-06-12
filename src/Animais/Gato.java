@@ -11,7 +11,7 @@ public class Gato {
     private String emotions;
 
 
-    public Gato(String name, String color, String race, int age, int height, double weight, String emotions) {
+    public Gato(String name, String color, String race, int age, int height, double weight) {
         this.name = name;
         this.color = color;
         this.race = race;
@@ -88,4 +88,9 @@ public class Gato {
             return this.emotions;
     }
 
+    @Override
+    public String toString() {
+        return String.format("Nome: %s, Idade: %d, Cor: %s, Raça: %s, Altura: %d, Peso: %.1f",
+                name, age, color, race, height, weight);
+    }
 }

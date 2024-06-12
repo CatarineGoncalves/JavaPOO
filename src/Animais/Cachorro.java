@@ -10,18 +10,28 @@ public class Cachorro {
     private int height;
     private double weight;
     private String emotions;
+    static int counterDogs;
 
     //constructor
-    public Cachorro(String name, int age, String color, String race, int height, double weight, String emotions) {
+    public Cachorro(String name, int age, String color, String race, int height, double weight) {
         this.name = name;
         this.age = age;
         this.color = color;
         this.race = race;
         this.height = height;
         this.weight = weight;
-        this.emotions = emotions;
+
+        counterDogs ++;
     }
 
+
+    public static int getCounterDogs() {
+        return counterDogs;
+    }
+
+    public static void setCounterDogs(int counterDogs) {
+        Cachorro.counterDogs = counterDogs;
+    }
 
     public String getName() {
         return name;
@@ -67,12 +77,8 @@ public class Cachorro {
         return weight;
     }
 
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-
     public String getEmotions() {
-        return emotions;
+        return this.emotions;
     }
 
     public void setEmotions(String emotions) {
@@ -91,9 +97,10 @@ public class Cachorro {
     }
 
 
+    @Override
     public String toString() {
-        return String.format("Nome: %s, Idade: %d, Cor: %s, Raça: %s, Altura: %d, Peso: %.1f, Ação: %s",
-                name, age, color, race, height, weight, emotions);
+        return String.format("Nome: %s, Idade: %d, Cor: %s, Raça: %s, Altura: %d, Peso: %.1f",
+                name, age, color, race, height, weight);
     }
 
 
