@@ -1,4 +1,4 @@
-package Animais;
+package antgAnimal;
 
 public class Gato extends AnimaisDomesticos {
 

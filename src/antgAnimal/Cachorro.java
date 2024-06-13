@@ -1,4 +1,4 @@
-package Animais;
+package antgAnimal;
 
 public class Cachorro extends AnimaisDomesticos {
 
@@ -88,8 +88,3 @@ public class Cachorro extends AnimaisDomesticos {
         System.out.println("AU AU");
     }
 }
-
-
-
-
-

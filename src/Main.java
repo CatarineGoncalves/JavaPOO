@@ -1,19 +1,30 @@
-import Animais.Cachorro;
-import Animais.Gato;
-import Animais.Passaro;
-
+import Animal.Animal;
+import Animal.Cachorro;
+import Animal.Gato;
+import Animal.Passaro;
+import Servicos.Petshop;
 
 public class Main {
+
     public static void main(String[] args) {
 
-    // variaveis estáticas (static) servem para quando queremos uma variavel unica para cada classe que engloba todos os objetos
+        Cachorro cachorro = new Cachorro("Pedro", 12, "Amarelo", 4);
+        Gato gato = new Gato("Maria", 11, "Branco", 5);
+        Passaro passaro = new Passaro("Piupiu", 1, "Preto", 2);
 
-        Cachorro cachorro = new Cachorro("Arthur", 12, "azul", 20, 8, "feliz");
-        Passaro passaro = new Passaro("Arzinho", 40, "amarelo e azul", 12, 2, "irritado");
-        Gato gato = new Gato("Franklin", 5, "preto", 50, 8, "calmo");
 
-      cachorro.sound();
-      gato.sound();
-      passaro.sound();
+        cachorro.sound();
+        gato.sound();
+        passaro.sound();
+
+        Petshop petshop = new Petshop();
+        petshop.deixarNoHotel(passaro);
+        petshop.darBanho(gato);
+
+        System.out.println(gato.getEstadoDeEspirito());
+        System.out.println(passaro.getEstadoDeEspirito());
+        System.out.println(cachorro.getEstadoDeEspirito());
     }
+
+
 }

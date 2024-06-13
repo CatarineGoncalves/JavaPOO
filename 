@@ -1,8 +1,8 @@
 warning: in the working copy of 'src/Main.java', LF will be replaced by CRLF the next time Git touches it
-[1mdiff --git a/src/Animais/Cachorro.java b/src/Animais/Cachorro.java[m
+[1mdiff --git a/src/Animal.Animais/Cachorro.java b/src/Animal.Animais/Cachorro.java[m
 [1mindex e2084b5..f38173e 100644[m
-[1m--- a/src/Animais/Cachorro.java[m
-[1m+++ b/src/Animais/Cachorro.java[m
+[1m--- a/src/Animal.Animais/Cachorro.java[m
+[1m+++ b/src/Animal.Animais/Cachorro.java[m
 [36m@@ -5,9 +5,11 @@[m [mpublic class Cachorro {[m
      public String nome;[m
      public String cor;[m
@@ -37,7 +37,7 @@ warning: in the working copy of 'src/Main.java', LF will be replaced by CRLF the
 [1mindex ab0a47b..f91dbac 100644[m
 [1m--- a/src/Main.java[m
 [1m+++ b/src/Main.java[m
-[36m@@ -3,17 +3,11 @@[m [mimport Animais.Cachorro;[m
+[36m@@ -3,17 +3,11 @@[m [mimport Animal.Animais.Cachorro;[m
  public class Main {[m
      public static void main(String[] args) {[m
  [m
